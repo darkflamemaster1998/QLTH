@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Phần mềm quản lý trường học</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="../CSS/common/common.css" rel="stylesheet" />
+    <link href="../CSS/Views/supplier.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header -->
+        <div class="header">
+            <!-- Top header -->
+            <div class="top-header">
+                <div class="main-logo float-left"></div>
+                <div class="logo-text float-left">- Thư viện</div>
+                <div class="expand-icon float-left">
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <ul class="user-content float-right">
+                    <a class="float-left">
+                        Trường THPT MISA 1 - Trần Thị Mai
+                        <i style="padding: 0 3px;" class="fas fa-caret-down"></i>
+                    </a>
+                    <img height="16" style="padding: 0 3px;" alt="Alt" class="float-left" src="">
+                </ul>
+            </div>
+            <!-- Menu header -->
+            <div class="menu-header float-left">
+                <div class="menu-box-item-header float-left">
+                    <div class="menu-item-header">
+                        <span class="text">Bàm làm việc</span>
+                    </div>
+                    <div class="menu-item-header">
+                        <span class="text">Sách</p></span>
+                    </div>
+                    <div class="menu-item-header">
+                        <span class="text">Báo, Tạp chí</span>
+                    </div>
+                    <div class="menu-item-header">
+                        <span class="text">Lưu thông</span>
+                    </div>
+                    <div class="menu-item-header">
+                        <span class="text">Bạn đọc</span>
+                    </div>
+                    <div class="menu-item-header">
+                        <span class="text">Danh mục</span>
+                    </div>
+                    <div class="menu-item-header">
+                        <span class="text">Thiết lập</span>
+                    </div>
+                    <div class="menu-item-header">
+                        <span class="text">Báo cáo</span>
+                    </div>
+                </div>
+                <div class="year-label">
+                    Năm học:
+                    <div class="current-select">
+                        2018-2019
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content -->
+        <div class="content">
+            <p>Danh sách bạn đọc</p>
+            <div class="toolbar">
+                <div id="btnregistration" class="toolbar-item">
+                    <div class="toolbar-item-icons toolbar-item-icons-registration"></div>
+                    <div class="toolbar-item-text">Đăng kí bạn đọc</div>
+                </div>
+                <div id="btnEdit" class="toolbar-item">
+                    <div class="toolbar-item-icons toolbar-item-icons-edit"></div>
+                    <div class="toolbar-item-text">Sửa</div>
+                </div>
+                <div id="btnDelete" class="toolbar-item">
+                    <div class="toolbar-item-icons toolbar-item-icons-delete"></div>
+                    <div class="toolbar-item-text">Xóa</div>
+                    <input id="index" type="hidden" />
+                </div>
+                <div id="btnSave" class="toolbar-item">
+                    <div class="toolbar-item-icons toolbar-item-icons-refresh"></div>
+                    <div class="toolbar-item-text">Nạp</div>
+                </div>
+                <div id="btnUtilities" class="toolbar-item">
+                    <div class="toolbar-item-icons toolbar-item-icons-utilities"></div>
+                    <div class="toolbar-item-text">Tiện ích</div>
+                </div>
+                <div id="btnPrintf" class="toolbar-item">
+                    <div class="toolbar-item-icons toolbar-item-icons-printf"></div>
+                    <div class="toolbar-item-text">In</div>
+                </div>
+                <div id="btnHelp" class="toolbar-item">
+                    <div class="toolbar-item-icons toolbar-item-icons-help"></div>
+                    <div class="toolbar-item-text">Giúp</div>
+                </div>
+
+            </div>
+            <div class="grid">
+                <table id="tblCustomer" border="1" recordId="CustomerID">
+                    <thead>
+                        <tr>
+                            <th>
+                                <div fieldData="CustomerID">
+                                    <div class="column-title">STT</div>
+                                    <div class="column-filter">
+                                        <div class="filter-option"></div>
+                                        <input class="filter-input" />
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div fieldData="CustomerCode">
+                                    <div class="column-title">Mã thẻ</div>
+                                    <div class="column-filter">
+                                        <div class="filter-option"></div>
+                                        <input class="filter-input" />
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div fieldData="CustomerName">
+                                    <div class="column-title">Tên bạn đọc</div>
+                                    <div class="column-filter">
+                                        <div class="filter-option"></div>
+                                        <input class="filter-input" />
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div fieldData="CustomerClass">
+                                    <div class="column-title">Lớp</div>
+                                    <div class="column-filter">
+                                        <div class="filter-option"></div>
+                                        <input class="filter-input" />
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div fieldData="GenderName">
+                                    <div class="column-title">Giới tính</div>
+                                    <div class="column-filter">
+                                        <div class="filter-option"></div>
+                                        <input class="filter-input" />
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div fieldData="Birthday" dataType="Date">
+                                    <div class="column-title">Ngày sinh</div>
+                                    <div class="column-filter">
+                                        <div class="filter-option"></div>
+                                        <input class="filter-input" />
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div fieldData="DateAllocated" dataType="Date">
+                                    <div class="column-title">Ngày cấp</div>
+                                    <div class="column-filter">
+                                        <div class="filter-option"></div>
+                                        <input class="filter-input" />
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div fieldData="Effect" dataType="Date">
+                                    <div class="column-title">Hiệu lực</div>
+                                    <div class="column-filter">
+                                        <div class="filter-option"></div>
+                                        <input class="filter-input" />
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div fieldData="DateExpired" dataType="Date">
+                                    <div class="column-title">Ngày hết hạn</div>
+                                    <div class="column-filter">
+                                        <div class="filter-option"></div>
+                                        <input class="filter-input" />
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>

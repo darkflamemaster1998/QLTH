@@ -1,0 +1,25 @@
+﻿html, body {
+    /*min-width:1200px;
+    max-width: 2000px;*/
+    padding:0;
+    margin:0;
+    font-family: TahomaCustom !important;
+    font-size: 12px;
+}
+
+.title {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #808080;
+}
+
+input {
+    width: 100%;
+}
+.float-left{
+    float: left;
+}
+.float-right {
+    float: right;
+}
+}

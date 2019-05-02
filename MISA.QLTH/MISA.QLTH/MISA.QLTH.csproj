@@ -80,7 +80,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\common\common.css" />
+    <Content Include="CSS\common\grid.css" />
+    <Content Include="CSS\common\header.css" />
+    <Content Include="CSS\common\toolbar.css" />
+    <Content Include="CSS\Views\supplier.css" />
     <Content Include="Global.asax" />
+    <Content Include="Views\supplier.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -102,7 +108,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="CSS\lib\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
