@@ -8,9 +8,11 @@
 }
 
 .title {
-    height: 40px;
-    width: 100%;
-    border: 1px solid #808080;
+    font-size: 22px;
+    font-weight: normal;
+    color: rgba(0,0,0,0.87);
+    line-height: 20px;
+    padding: 15px 0;
 }
 
 input {

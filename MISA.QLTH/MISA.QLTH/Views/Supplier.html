@@ -20,10 +20,10 @@
                 </div>
                 <ul class="user-content float-right">
                     <a class="float-left">
-                        Trường THPT MISA 1 - Trần Thị Mai
+                        Trường liên cấp MISA - admin
                         <i style="padding: 0 3px;" class="fas fa-caret-down"></i>
                     </a>
-                    <img height="16" style="padding: 0 3px;" alt="Alt" class="float-left" src="">
+                    <img height="16" style="padding: 0 3px;" alt="Alt" class="float-left" src="http://thptmisa1.demo.qlth.vn/Library/Content/Css/Main/Image/Icon/Help16.png">
                 </ul>
             </div>
             <!-- Menu header -->
@@ -33,71 +33,85 @@
                         <span class="text">Bàm làm việc</span>
                     </div>
                     <div class="menu-item-header">
-                        <span class="text">Sách</p></span>
+                        <span class="text">
+                            Sách
+                            <i class="fas fa-angle-down"></i>
+                        </span>
                     </div>
                     <div class="menu-item-header">
-                        <span class="text">Báo, Tạp chí</span>
+                        <span class="text">
+                            Báo, Tạp chí
+                            <i class="fas fa-angle-down"></i>
+                        </span>
                     </div>
                     <div class="menu-item-header">
-                        <span class="text">Lưu thông</span>
+                        <span class="text">
+                            Lưu thông
+                            <i class="fas fa-angle-down"></i>
+                        </span>
                     </div>
                     <div class="menu-item-header">
                         <span class="text">Bạn đọc</span>
                     </div>
                     <div class="menu-item-header">
-                        <span class="text">Danh mục</span>
+                        <span class="text">
+                            Danh mục
+                            <i class="fas fa-angle-down"></i>
+                        </span>
                     </div>
                     <div class="menu-item-header">
-                        <span class="text">Thiết lập</span>
+                        <span class="text">
+                            Thiết lập
+                            <i class="fas fa-angle-down"></i>
+                        </span>
                     </div>
                     <div class="menu-item-header">
                         <span class="text">Báo cáo</span>
                     </div>
                 </div>
-                <div class="year-label">
+                <span class="year-label float-right">
                     Năm học:
-                    <div class="current-select">
-                        2018-2019
-                        <i class="fas fa-angle-down"></i>
-                    </div>
-                </div>
+                    <span class="current-select">
+                        2018 - 2019
+                        <i style="padding-left:2px; padding-right:4px;" class="fas fa-angle-down"></i>
+                    </span>
+                </span>
             </div>
         </div>
         <!-- Content -->
         <div class="content">
-            <p>Danh sách bạn đọc</p>
+            <div  class="title">
+                <label>Danh sách nhà cung cấp</label>
+            </div>
+            <!-- Tool bar -->
             <div class="toolbar">
-                <div id="btnregistration" class="toolbar-item">
-                    <div class="toolbar-item-icons toolbar-item-icons-registration"></div>
-                    <div class="toolbar-item-text">Đăng kí bạn đọc</div>
+                <div id="btnAdd" class="toolbar-item">
+                    <div class="toolbar-item-icon icon-add"></div>
+                    <div class="toolbar-item-text">Thêm</div>
                 </div>
                 <div id="btnEdit" class="toolbar-item">
-                    <div class="toolbar-item-icons toolbar-item-icons-edit"></div>
+                    <div class="toolbar-item-icon icon-edit"></div>
                     <div class="toolbar-item-text">Sửa</div>
                 </div>
                 <div id="btnDelete" class="toolbar-item">
-                    <div class="toolbar-item-icons toolbar-item-icons-delete"></div>
+                    <div class="toolbar-item-icon icon-delete"></div>
                     <div class="toolbar-item-text">Xóa</div>
                     <input id="index" type="hidden" />
                 </div>
-                <div id="btnSave" class="toolbar-item">
-                    <div class="toolbar-item-icons toolbar-item-icons-refresh"></div>
+                <div id="btnSave" class="toolbar-item" style="border-right: 1px solid #bbcadb;">
+                    <div class="toolbar-item-icon icon-refresh"></div>
                     <div class="toolbar-item-text">Nạp</div>
                 </div>
-                <div id="btnUtilities" class="toolbar-item">
-                    <div class="toolbar-item-icons toolbar-item-icons-utilities"></div>
-                    <div class="toolbar-item-text">Tiện ích</div>
-                </div>
-                <div id="btnPrintf" class="toolbar-item">
-                    <div class="toolbar-item-icons toolbar-item-icons-printf"></div>
-                    <div class="toolbar-item-text">In</div>
-                </div>
                 <div id="btnHelp" class="toolbar-item">
-                    <div class="toolbar-item-icons toolbar-item-icons-help"></div>
+                    <div class="toolbar-item-icon icon-help"></div>
                     <div class="toolbar-item-text">Giúp</div>
                 </div>
-
             </div>
+            <!-- Grid header -->
+            <div class="grid-header">
+                <div class=""></div>
+            </div>
+            <!-- Grid view -->
             <div class="grid">
                 <table id="tblCustomer" border="1" recordId="CustomerID">
                     <thead>
