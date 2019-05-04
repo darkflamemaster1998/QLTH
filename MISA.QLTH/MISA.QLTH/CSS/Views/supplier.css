@@ -8,18 +8,21 @@
     min-height: 40px;
     background-color: white;
 }
+
 .main-logo {
     height: 40px;
     width: 203px;
     background-image: url(http://cdn.qlth.vn/Library/Content/Css/Main/Image/Background/logo.png);
     background-repeat: no-repeat;
 }
+
 .logo-text {
     padding: 14px 2px 0 6px;
     font-size: 18px;
     color: #7a6b5e;
     font-family: 'Segoe UI';
 }
+
 .expand-icon {
     float: left;
     background: transparent;
@@ -35,6 +38,7 @@
     width: 20px;
     height: 20px;
 }
+
 .user-content {
     font: normal 12px 'Segoe UI';
     cursor: pointer;
@@ -47,8 +51,10 @@
     border-bottom: solid 5px #998675;
     overflow: hidden;
 }
+
     .menu-header .menu-box-item-header {
     }
+
         .menu-header .menu-box-item-header .menu-item-header {
             padding: 1px 10px 2px;
             color: white;
@@ -65,13 +71,16 @@
             .menu-header .menu-box-item-header .menu-item-header span.text:hover {
                 color: orange !important;
             }
-.fa-angle-down{
-    padding-left:4px;
+
+.fa-angle-down {
+    padding-left: 4px;
 }
+
 .year-label {
     margin-top: 8px;
-    margin-right:7px;
+    margin-right: 7px;
 }
+
 .current-select {
     background-color: #f7f7f7;
     padding: 3px 8px;
@@ -80,7 +89,8 @@
     box-sizing: border-box;
 }
 /*Content*/
-.content{
+.content {
+    height: calc(100% - 80px);
     margin-left: 15px;
     margin-right: 15px;
 }
@@ -88,9 +98,9 @@
 .toolbar {
     width: 100%;
     height: 29px;
-    background-color: #f7f7f7;
     border: 1px solid #ccc;
     border-radius: 3px;
+    background-color: #f7f7f7;
     box-sizing: border-box;
     display: flex;
 }
@@ -99,15 +109,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 5px ;
+        padding: 5px;
         height: 16px;
-        margin-top: 6px;
-        box-sizing:border-box;
+        margin-top: 1px;
+        border-radius: 5px;
         cursor: pointer;
     }
 
         .toolbar .toolbar-item:hover {
-            border: 1px solid #00ff90;
+            background-color: #808080;
         }
 
         .toolbar .toolbar-item .toolbar-item-icon {
@@ -119,21 +129,193 @@
         .toolbar .toolbar-item .toolbar-item-text {
             padding: 4px;
         }
+
 .icon-add {
     background: url("http://cdn.qlth.vn/Library/Content/Css/Main/image/icon/add16.png");
 }
+
 .icon-edit {
     background: url("http://cdn.qlth.vn/Library/Content/Css/Main/image/icon/edit16.png");
 }
+
 .icon-delete {
     background: url("http://cdn.qlth.vn/Library/Content/Css/Main/image/icon/delete_metro.png");
 }
+
 .icon-refresh {
     background: url("http://cdn.qlth.vn/Library/Content/Css/Main/image/icon/refresh16.png");
 }
+
 .icon-help {
     background: url("http://cdn.qlth.vn/Library/Content/Css/Main/image/icon/help16.png");
 }
-.grid-header{
+/*Grid*/
+.grid {
+    width: 100%;
+    height: calc(100% - 80px);
+    background-color: white;
+}
 
+.grid-header {
+    width: 100%;
+    height: 64px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+}
+
+.grid-header-item-1 {
+    float: left;
+    height: 100%;
+    width: 3%;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.grid-header-item-2 {
+    float: left;
+    height: 100%;
+    width: 12.3%;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+    /*.grid-header-item-2 input {
+        margin-top: 4px;
+        float: left;
+        width: calc(100% - 30px);
+    }*/
+
+.grid-header-item-3 {
+    float: left;
+    height: 100%;
+    width: 20%;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+    /*.grid-header-item-3 input {
+        margin-top: 4px;
+        float: left;
+        width: calc(100% - 30px);
+    }*/
+
+.column-title {
+    height: 34px;
+    padding: 4px;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    line-height: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.column-filter .filter-input {
+    float: left;
+    width: calc(100% - 51px);
+    margin-top: 4px;
+}
+    .column-filter .filter-input input {
+        border: solid 1px #ccc;
+        border-radius: 2px;
+        height: 17px;
+        padding-left: 2px;
+    }
+.filter-option {
+    float: left;
+    height: 19px;
+    width: 36px;
+    margin: 4px 1px 4px 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/*Grid view*/
+.grid-view {
+    width: 100%;
+    height: calc(100% - 93px);
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/* Một hàng*/
+.data-item-row{
+    width:100%;
+    height: 35px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+}
+.data-item-1 {
+    float: left;
+    height: 100%;
+    width: 3%;
+    background-color: #f7f7f7;
+    border-right: 1px solid #ccc;
+    line-height: 37px;
+    text-align:center;
+    box-sizing: border-box;
+}
+.data-item-2 {
+    float: left;
+    height: 100%;
+    width: 12.3%;
+    line-height: 37px;
+    padding-left: 5px;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.data-item-3 {
+    float: left;
+    height: 100%;
+    width: 20%;
+    line-height: 37px;
+    padding-left: 5px;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/*Grid footer*/
+.grid-footer {
+    width: 100%;
+    height: 29px;
+    border: 1px solid #ccc;
+    border-top:none;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    display: flex;
+}
+.grid-footer-left{
+    width:90%;
+    height: 100%;
+    display:flex;
+}
+.icon-change-page{
+    display:flex;
+    width:16px;
+    height:16px;
+}
+.go-to-first-page {
+    background: url("http://cdn.qlth.vn/Library/Content/Css/Main/image/icon/add16.png");
+}
+.go-to-before-page {
+    background: url("http://cdn.qlth.vn/Library/Content/Css/Main/image/icon/add16.png");
+}
+.go-to-after-page {
+    background: url("http://cdn.qlth.vn/Library/Content/Css/Main/image/icon/add16.png");
+}
+.go-to-last-page {
+    background: url("http://cdn.qlth.vn/Library/Content/Css/Main/image/icon/add16.png");
+}
+.grid-footer-right {
+    height: 100%;
+    width: 200px;
+    line-height: 29px;
+    text-align: right;
+    height: 100%;
+    width: 300px;
+    line-height: 29px;
+    text-align: right;
+    padding-right: 10px;
 }

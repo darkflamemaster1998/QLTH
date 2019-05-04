@@ -80,7 +80,7 @@
         </div>
         <!-- Content -->
         <div class="content">
-            <div  class="title">
+            <div class="title">
                 <label>Danh sách nhà cung cấp</label>
             </div>
             <!-- Tool bar -->
@@ -96,9 +96,8 @@
                 <div id="btnDelete" class="toolbar-item">
                     <div class="toolbar-item-icon icon-delete"></div>
                     <div class="toolbar-item-text">Xóa</div>
-                    <input id="index" type="hidden" />
                 </div>
-                <div id="btnSave" class="toolbar-item" style="border-right: 1px solid #bbcadb;">
+                <div id="btnSave" class="toolbar-item" style="border-right: 1px solid #bbcadb; border-radius:0;">
                     <div class="toolbar-item-icon icon-refresh"></div>
                     <div class="toolbar-item-text">Nạp</div>
                 </div>
@@ -107,103 +106,232 @@
                     <div class="toolbar-item-text">Giúp</div>
                 </div>
             </div>
-            <!-- Grid header -->
-            <div class="grid-header">
-                <div class=""></div>
-            </div>
-            <!-- Grid view -->
+            <!--Grid-->
             <div class="grid">
-                <table id="tblCustomer" border="1" recordId="CustomerID">
-                    <thead>
-                        <tr>
-                            <th>
-                                <div fieldData="CustomerID">
-                                    <div class="column-title">STT</div>
-                                    <div class="column-filter">
-                                        <div class="filter-option"></div>
-                                        <input class="filter-input" />
-                                    </div>
-                                </div>
-                            </th>
-                            <th>
-                                <div fieldData="CustomerCode">
-                                    <div class="column-title">Mã thẻ</div>
-                                    <div class="column-filter">
-                                        <div class="filter-option"></div>
-                                        <input class="filter-input" />
-                                    </div>
-                                </div>
-                            </th>
-                            <th>
-                                <div fieldData="CustomerName">
-                                    <div class="column-title">Tên bạn đọc</div>
-                                    <div class="column-filter">
-                                        <div class="filter-option"></div>
-                                        <input class="filter-input" />
-                                    </div>
-                                </div>
-                            </th>
-                            <th>
-                                <div fieldData="CustomerClass">
-                                    <div class="column-title">Lớp</div>
-                                    <div class="column-filter">
-                                        <div class="filter-option"></div>
-                                        <input class="filter-input" />
-                                    </div>
-                                </div>
-                            </th>
-                            <th>
-                                <div fieldData="GenderName">
-                                    <div class="column-title">Giới tính</div>
-                                    <div class="column-filter">
-                                        <div class="filter-option"></div>
-                                        <input class="filter-input" />
-                                    </div>
-                                </div>
-                            </th>
-                            <th>
-                                <div fieldData="Birthday" dataType="Date">
-                                    <div class="column-title">Ngày sinh</div>
-                                    <div class="column-filter">
-                                        <div class="filter-option"></div>
-                                        <input class="filter-input" />
-                                    </div>
-                                </div>
-                            </th>
-                            <th>
-                                <div fieldData="DateAllocated" dataType="Date">
-                                    <div class="column-title">Ngày cấp</div>
-                                    <div class="column-filter">
-                                        <div class="filter-option"></div>
-                                        <input class="filter-input" />
-                                    </div>
-                                </div>
-                            </th>
-                            <th>
-                                <div fieldData="Effect" dataType="Date">
-                                    <div class="column-title">Hiệu lực</div>
-                                    <div class="column-filter">
-                                        <div class="filter-option"></div>
-                                        <input class="filter-input" />
-                                    </div>
-                                </div>
-                            </th>
-                            <th>
-                                <div fieldData="DateExpired" dataType="Date">
-                                    <div class="column-title">Ngày hết hạn</div>
-                                    <div class="column-filter">
-                                        <div class="filter-option"></div>
-                                        <input class="filter-input" />
-                                    </div>
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+                <!-- Grid header -->
+                <div class="grid-header">
+                    <div class="grid-header-item-1">
+                        <div class="column-title" style="border-bottom:none;">STT</div>
+                    </div>
+                    <div class="grid-header-item-2">
+                        <div class="column-title">Mã nhà cung cấp</div>
+                        <div class="column-filter">
+                            <div class="filter-option">
+                                <div class="filter-option-left"></div>
+                                <div class="filter-option-right"></div>
+                            </div>
+                            <div class="filter-input">
+                                <input type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-header-item-3">
+                        <div class="column-title">Tên nhà cung cấp</div>
+                        <div class="column-filter">
+                            <div class="filter-option">
+                                <div class="filter-option-left"></div>
+                                <div class="filter-option-right"></div>
+                            </div>
+                            <div class="filter-input">
+                                <input type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-header-item-3">
+                        <div class="column-title">Địa chỉ</div>
+                        <div class="column-filter">
+                            <div class="filter-option">
+                                <div class="filter-option-left"></div>
+                                <div class="filter-option-right"></div>
+                            </div>
+                            <div class="filter-input">
+                                <input type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-header-item-2">
+                        <div class="column-title">Mã số thuế</div>
+                        <div class="column-filter">
+                            <div class="filter-option">
+                                <div class="filter-option-left"></div>
+                                <div class="filter-option-right"></div>
+                            </div>
+                            <div class="filter-input">
+                                <input type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-header-item-3">
+                        <div class="column-title">Ghi chú</div>
+                        <div class="column-filter">
+                            <div class="filter-option">
+                                <div class="filter-option-left"></div>
+                                <div class="filter-option-right"></div>
+                            </div>
+                            <div class="filter-input">
+                                <input type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-header-item-2" style="border:none;">
+                        <div class="column-title">Sử dụng</div>
+                        <div class="column-filter">
+                            <div class="filter-option"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid view -->
+                <div class="grid-view">
+                    <div class="data-item-row">
+                        <div class="data-item-1">
+                            <span>1</span>
+                        </div>
+                        <div class="data-item-2">
+                            <span>NCC001</span>
+                        </div>
+                        <div class="data-item-3">
+                            <span>Công ty in văn hóa Sài Gòn</span>
+                        </div>
+                        <div class="data-item-3">
+                            <span>754 Hàm Tử, Phường 5, Quận 5, HCM</span>
+                        </div>
+                        <div class="data-item-2">
+                            <span>8207604443</span>
+                        </div>
+                        <div class="data-item-3">
+                            <span></span>
+                        </div>
+                        <div class="data-item-2" style="border-right:none;">
+                            <input type="checkbox" name="name" value="" />
+                        </div>
+                    </div>
+                    <div class="data-item-row">
+                        <div class="data-item-1">
+                            <span>1</span>
+                        </div>
+                        <div class="data-item-2">
+                            <span>NCC001</span>
+                        </div>
+                        <div class="data-item-3">
+                            <span>Công ty in văn hóa Sài Gòn</span>
+                        </div>
+                        <div class="data-item-3">
+                            <span>754 Hàm Tử, Phường 5, Quận 5, HCM</span>
+                        </div>
+                        <div class="data-item-2">
+                            <span>8207604443</span>
+                        </div>
+                        <div class="data-item-3">
+                            <span></span>
+                        </div>
+                        <div class="data-item-2" style="border-right:none;">
+                            <input type="checkbox" name="name" value="" />
+                        </div>
+                    </div>
+                    <div class="data-item-row">
+                        <div class="data-item-1">
+                            <span>1</span>
+                        </div>
+                        <div class="data-item-2">
+                            <span>NCC001</span>
+                        </div>
+                        <div class="data-item-3">
+                            <span>Công ty in văn hóa Sài Gòn</span>
+                        </div>
+                        <div class="data-item-3">
+                            <span>754 Hàm Tử, Phường 5, Quận 5, HCM</span>
+                        </div>
+                        <div class="data-item-2">
+                            <span>8207604443</span>
+                        </div>
+                        <div class="data-item-3">
+                            <span></span>
+                        </div>
+                        <div class="data-item-2" style="border-right:none;">
+                            <input type="checkbox" name="name" value="" />
+                        </div>
+                    </div>
+                    <div class="data-item-row">
+                        <div class="data-item-1"><span></span></div>
+                        <div class="data-item-2"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-2"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-2" style="border-right:none;">
+                        </div>
+                    </div>
+                    <div class="data-item-row">
+                        <div class="data-item-1"><span></span></div>
+                        <div class="data-item-2"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-2"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-2" style="border-right:none;">
+                        </div>
+                    </div>
+                    <div class="data-item-row">
+                        <div class="data-item-1"><span></span></div>
+                        <div class="data-item-2"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-2"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-2" style="border-right:none;">
+                        </div>
+                    </div>
+                    <div class="data-item-row">
+                        <div class="data-item-1"><span></span></div>
+                        <div class="data-item-2"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-2"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-2" style="border-right:none;">
+                        </div>
+                    </div>
+                    <div class="data-item-row">
+                        <div class="data-item-1"><span></span></div>
+                        <div class="data-item-2"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-2"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-2" style="border-right:none;">
+                        </div>
+                    </div>
+                    <div class="data-item-row">
+                        <div class="data-item-1"><span></span></div>
+                        <div class="data-item-2"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-2"><span></span></div>
+                        <div class="data-item-3"><span></span></div>
+                        <div class="data-item-2" style="border-right:none;">
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid footer -->
+                <div class="grid-footer">
+                    <div class="grid-footer-left">
+                        <span class="go-to-first-page icon-change-page"></span>
+                        <span class="go-to-before-page icon-change-page"></span>
+                        <span>Trang</span>
+                        <span>trên 2</span>
+                        <span class="go-to-after-page icon-change-page"></span>
+                        <span class="go-to-last-page icon-change-page"></span>
+                        <span>Số bản ghi</span>
+                        <div class="number-display-record">
+                            <input type="type" name="name" value="" />
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="grid-footer-right float-right">
+                        <span>Hiển thị 1 - 50 trên 100 kết quả</span>
+                    </div>
+                </div>
             </div>
-
-
         </div>
     </div>
 
