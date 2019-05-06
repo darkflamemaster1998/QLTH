@@ -81,11 +81,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\common\common.css" />
+    <Content Include="CSS\common\dialog.css" />
     <Content Include="CSS\common\grid.css" />
     <Content Include="CSS\common\header.css" />
     <Content Include="CSS\common\toolbar.css" />
+    <Content Include="CSS\lib\bootstrap.min.css" />
+    <Content Include="CSS\lib\images\ui-icons.png" />
+    <Content Include="CSS\lib\images\ui-icons_444444_256x240.png" />
+    <Content Include="CSS\lib\images\ui-icons_555555_256x240.png" />
+    <Content Include="CSS\lib\images\ui-icons_777620_256x240.png" />
+    <Content Include="CSS\lib\images\ui-icons_777777_256x240.png" />
+    <Content Include="CSS\lib\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="CSS\lib\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="CSS\lib\jquery-ui.min.css" />
     <Content Include="CSS\Views\supplier.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\base\dialog.js" />
+    <Content Include="Scripts\lib\bootstrap.min.js" />
+    <Content Include="Scripts\lib\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\lib\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\lib\jquery-ui.min.js" />
+    <Content Include="Scripts\lib\popper.min.js" />
+    <Content Include="Scripts\Views\supplier.js" />
     <Content Include="Views\supplier.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -108,9 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="CSS\lib\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

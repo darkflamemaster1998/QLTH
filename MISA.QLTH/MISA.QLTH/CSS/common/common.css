@@ -1,6 +1,6 @@
 ﻿html, body, .wrapper {
-    /*min-width:1200px;
-    max-width: 2000px;*/
+    min-width:1200px;
+    max-width: 2000px;
     height: 100%;
     width: 100%;
     padding: 0;

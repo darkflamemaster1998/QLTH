@@ -3,12 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <title>Phần mềm quản lý trường học</title>
+    <link href="../CSS/lib/bootstrap.min.css" rel="stylesheet" />
+    <link href="../CSS/lib/jquery-ui.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="../CSS/common/common.css" rel="stylesheet" />
     <link href="../CSS/Views/supplier.css" rel="stylesheet" />
+    <link href="../CSS/common/dialog.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper"style="display:none;">
         <!-- Header -->
         <div class="header">
             <!-- Top header -->
@@ -23,7 +26,7 @@
                         Trường liên cấp MISA - admin
                         <i style="padding: 0 3px;" class="fas fa-caret-down"></i>
                     </a>
-                    <img height="16" style="padding: 0 3px;" alt="Alt" class="float-left" src="http://thptmisa1.demo.qlth.vn/Library/Content/Css/Main/Image/Icon/Help16.png">
+                    <img height="16" style="padding: 0 8px 0 0;" alt="Alt" class="float-left" src="http://cdn.qlth.vn/Library/Content/Css/Main/image/icon/help16.png">
                 </ul>
             </div>
             <!-- Menu header -->
@@ -73,7 +76,7 @@
                     Năm học:
                     <span class="current-select">
                         2018 - 2019
-                        <i style="padding-left:2px; padding-right:4px;" class="fas fa-angle-down"></i>
+                        <i style="padding-left:2px;padding-right:8px;" class="fas fa-angle-down"></i>
                     </span>
                 </span>
             </div>
@@ -97,10 +100,11 @@
                     <div class="toolbar-item-icon icon-delete"></div>
                     <div class="toolbar-item-text">Xóa</div>
                 </div>
-                <div id="btnSave" class="toolbar-item" style="border-right: 1px solid #bbcadb; border-radius:0;">
+                <div id="btnSave" class="toolbar-item">
                     <div class="toolbar-item-icon icon-refresh"></div>
                     <div class="toolbar-item-text">Nạp</div>
                 </div>
+                <div class="separator"></div>
                 <div id="btnHelp" class="toolbar-item">
                     <div class="toolbar-item-icon icon-help"></div>
                     <div class="toolbar-item-text">Giúp</div>
@@ -117,8 +121,11 @@
                         <div class="column-title">Mã nhà cung cấp</div>
                         <div class="column-filter">
                             <div class="filter-option">
-                                <div class="filter-option-left"></div>
-                                <div class="filter-option-right"></div>
+                                <div class="filter-option-right"><span><i style="padding: 0 3px;" class="fas fa-caret-down"></i></span></div>
+                                <div class="filter-option-middle"><span class="separator"></span></div>
+                                <div class="filter-option-left">
+                                    <span>* :</span>
+                                </div>
                             </div>
                             <div class="filter-input">
                                 <input type="text" />
@@ -129,8 +136,11 @@
                         <div class="column-title">Tên nhà cung cấp</div>
                         <div class="column-filter">
                             <div class="filter-option">
-                                <div class="filter-option-left"></div>
-                                <div class="filter-option-right"></div>
+                                <div class="filter-option-right"><span><i style="padding: 0 3px;" class="fas fa-caret-down"></i></span></div>
+                                <div class="filter-option-middle"><span class="separator"></span></div>
+                                <div class="filter-option-left">
+                                    <span>* :</span>
+                                </div>
                             </div>
                             <div class="filter-input">
                                 <input type="text" />
@@ -141,8 +151,11 @@
                         <div class="column-title">Địa chỉ</div>
                         <div class="column-filter">
                             <div class="filter-option">
-                                <div class="filter-option-left"></div>
-                                <div class="filter-option-right"></div>
+                                <div class="filter-option-right"><span><i style="padding: 0 3px;" class="fas fa-caret-down"></i></span></div>
+                                <div class="filter-option-middle"><span class="separator"></span></div>
+                                <div class="filter-option-left">
+                                    <span>* :</span>
+                                </div>
                             </div>
                             <div class="filter-input">
                                 <input type="text" />
@@ -153,8 +166,11 @@
                         <div class="column-title">Mã số thuế</div>
                         <div class="column-filter">
                             <div class="filter-option">
-                                <div class="filter-option-left"></div>
-                                <div class="filter-option-right"></div>
+                                <div class="filter-option-right"><span><i style="padding: 0 3px;" class="fas fa-caret-down"></i></span></div>
+                                <div class="filter-option-middle"><span class="separator"></span></div>
+                                <div class="filter-option-left">
+                                    <span>* :</span>
+                                </div>
                             </div>
                             <div class="filter-input">
                                 <input type="text" />
@@ -165,8 +181,11 @@
                         <div class="column-title">Ghi chú</div>
                         <div class="column-filter">
                             <div class="filter-option">
-                                <div class="filter-option-left"></div>
-                                <div class="filter-option-right"></div>
+                                <div class="filter-option-right"><span><i style="padding: 0 3px;" class="fas fa-caret-down"></i></span></div>
+                                <div class="filter-option-middle"><span class="separator"></span></div>
+                                <div class="filter-option-left">
+                                    <span>* :</span>
+                                </div>
                             </div>
                             <div class="filter-input">
                                 <input type="text" />
@@ -176,7 +195,13 @@
                     <div class="grid-header-item-2" style="border:none;">
                         <div class="column-title">Sử dụng</div>
                         <div class="column-filter">
-                            <div class="filter-option"></div>
+                            <div class="filter-option" style="width:calc(100% - 9px);">
+                                <div class="filter-option-right"><span><i style="padding: 0 3px;" class="fas fa-caret-down"></i></span></div>
+                                <div class="filter-option-middle"><span class="separator"></span></div>
+                                <div class="filter-option-left" style="font-weight:normal;margin:0 auto;">
+                                    <span>Bỏ lọc</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -317,15 +342,16 @@
                     <div class="grid-footer-left">
                         <span class="go-to-first-page icon-change-page"></span>
                         <span class="go-to-before-page icon-change-page"></span>
+                        <span class="separator"></span>
                         <span>Trang</span>
-                        <span>trên 2</span>
+                        <span class="current-display-record"><input type="text" name="name" value="1" /></span>
+                        <span class="total-record">trên 2</span>
                         <span class="go-to-after-page icon-change-page"></span>
                         <span class="go-to-last-page icon-change-page"></span>
+                        <span class="separator"></span>
                         <span>Số bản ghi</span>
-                        <div class="number-display-record">
-                            <input type="type" name="name" value="" />
-                            <span></span>
-                        </div>
+                        <span class="number-display-record"><input type="text" name="name" value="50" /></span>
+                        <span class="number-display-record-icon"></span>
                     </div>
                     <div class="grid-footer-right float-right">
                         <span>Hiển thị 1 - 50 trên 100 kết quả</span>
@@ -334,7 +360,103 @@
             </div>
         </div>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Dialog đăng ký bạn đọc -->
+    <div class="dlgResgisterReader" title="Đăng ký bạn đọc" style="display:none;">
+        <div class="dialog-content">
+            <div class="dialog-left  float-left">
+                <div class="avatar"></div>
+                <div class="avatar-change">
+                    <input type="file" id="avatar-change-file" name="name" value="" />
+                </div>
+            </div>
+            <div class="dialog-right float-left">
+                <div class="lblTitle"><label>THÔNG TIN BẠN ĐỌC</label></div>
+                <div class="dlgRow">
+                    <div class="col-type-1"><label>Họ và đệm (*)</label></div>
+                    <div class="col-type-5"><input type="text" id="txtFirstAndMiddleName" class="required" value="Bùi Quang " /></div>
+                    <div class="col-type-2 secondlable"><label>Tên (*)</label></div>
+                    <div class="col-type-5"><input type="text" id="txtLastName" class="required" value="Linh" /></div>
+                    <div class="col-type-3 secondlable"><label class="">Họ và tên</label></div>
+                    <div class="col-type-flex"><input type="text" disabled id="txtFullName" value="Bùi Quang Linh" /></div>
+                </div>              
+                <div class="dlgRow">
+                    <div class="col-type-1"><label>Lớp (*)</label></div>
+                    <div class="col-type-5"><input type="text" id="class" name="class" /></div>
+                    <div class="col-type-2 secondlable"><label class="">Giới tính</label></div>
+                    <div class="col-type-6">
+                        <select id="cboGender">
+                            <option value="1">Nam</option>
+                            <option value="0">Nữ</option>
+                        </select>
+                    </div>
+                    <div class="col-type-3 secondlable"><label class="">Ngày sinh</label></div>
+                    <div class="col-type-5"><input type="text" id="txtBirthday" name="Birthday" /></div>
+                </div>
+                <div class="dlgRow">
+                    <div class="col-type-1"><label>Địa chỉ</label></div>
+                    <div class="col-type-flex"><input type="text" id="txtAddress" /></div>
+                </div>
+                <div class="lblTitle"><label>THÔNG TIN THẺ</label></div>
+                <div class="dlgRow">
+                    <div class="col-type-1"><label>Mã thẻ</label></div>
+                    <div class="col-type-5"><input type="text" id="txtCardCode" /></div>
+                    <div class="col-type-4 secondlable"><label>Ngày cấp</label></div>
+                    <div class="col-type-5"><input type="text" id="txtlicensedDate" /></div>
+                </div>
+                <div class="dlgRow">
+                    <div class="col-type-1"><label>Ngày hiệu lực</label></div>
+                    <div class="col-type-5"><input type="text" id="txtEffectDate" /></div>
+                    <div class="col-type-4 secondlable"><label>Ngày hết hạn</label></div>
+                    <div class="col-type-5"><input type="text" id="txtExpireDate" /></div>
+                </div>
+            </div>
+            <!--<div class="dialog-right float-left">
+                <div class="row  lblTitle"><label>THÔNG TIN BẠN ĐỌC</label></div>
+                <div class="row">
+                    <div class="col-sm-2"><label>Họ và đệm (*)</label></div>
+                    <div class="col-sm-2"><input type="text" id="txtFirstAndMiddleName" class="required" value="Bùi Quang " /></div>
+                    <div class="col-sm-2"><label>Tên (*)</label></div>
+                    <div class="col-sm-2"><input type="text" id="txtLastName" class="required" value="Linh" /></div>
+                    <div class="col-sm-2"><label class="">Họ và tên</label></div>
+                    <div class="col-sm-2"><input type="text" disabled id="txtFullName" value="Bùi Quang Linh" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"><label>Lớp (*)</label></div>
+                    <div class="col-sm-2"><input type="text" id="class" name="class" /></div>
+                    <div class="col-sm-2"><label class="">Giới tính</label></div>
+                    <div class="col-sm-2">
+                        <select id="cboGender">
+                            <option value="1">Nam</option>
+                            <option value="0">Nữ</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2"><label class="">Ngày sinh</label></div>
+                    <div class="col-sm-2"><input type="text" id="txtBirthday" name="Birthday" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"><label>Địa chỉ</label></div>
+                    <div class="col-sm-10"><input type="text" id="txtAddress" /></div>
+                </div>
+                <div class="row  lblTitle"><label>THÔNG TIN THẺ</label></div>
+                <div class="row">
+                    <div class="col-sm-2"><label>Mã thẻ</label></div>
+                    <div class="col-sm-2"><input type="text" id="txtCardCode" /></div>
+                    <div class="col-sm-2"><label>Ngày cấp</label></div>
+                    <div class="col-sm-3"><input type="text" id="txtlicensedDate" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"><label>Ngày hiệu lực</label></div>
+                    <div class="col-sm-2"><input type="text" id="txtEffectDate" /></div>
+                    <div class="col-sm-2"><label>Ngày hết hạn</label></div>
+                    <div class="col-sm-3"><input type="text" id="txtExpireDate" /></div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <script src="../Scripts/lib/jquery-3.3.1.min.js"></script>
+    <script src="../Scripts/lib/jquery-ui.min.js"></script>
+    <script src="../Scripts/base/dialog.js"></script>
+    <script src="../Scripts/Views/supplier.js"></script>
 </body>
 </html>
