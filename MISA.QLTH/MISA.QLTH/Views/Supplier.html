@@ -11,10 +11,12 @@
     <link href="../CSS/common/dialog.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="wrapper"style="display:none;">
+    <div class="wrapper">
         <!-- Header -->
+        <!-- Created by BQLINH (28/4/2019) -->
         <div class="header">
             <!-- Top header -->
+            <!-- Created by BQLINH (28/4/2019) -->
             <div class="top-header">
                 <div class="main-logo float-left"></div>
                 <div class="logo-text float-left">- Thư viện</div>
@@ -26,10 +28,11 @@
                         Trường liên cấp MISA - admin
                         <i style="padding: 0 3px;" class="fas fa-caret-down"></i>
                     </a>
-                    <img height="16" style="padding: 0 8px 0 0;" alt="Alt" class="float-left" src="http://cdn.qlth.vn/Library/Content/Css/Main/image/icon/help16.png">
+                    <img height="16" style="padding: 0 8px 0 0;" alt="Alt" class="float-left" src="http://cdn.qlth.vn/Library/Content/Css/Main/image/icon/help16.png" />
                 </ul>
             </div>
             <!-- Menu header -->
+            <!-- Created by BQLINH (28/4/2019) -->
             <div class="menu-header float-left">
                 <div class="menu-box-item-header float-left">
                     <div class="menu-item-header">
@@ -111,8 +114,10 @@
                 </div>
             </div>
             <!--Grid-->
+            <!-- Created by BQLINH (1/5/2019) -->
             <div class="grid">
                 <!-- Grid header -->
+                <!-- Created by BQLINH (1/5/2019) -->
                 <div class="grid-header">
                     <div class="grid-header-item-1">
                         <div class="column-title" style="border-bottom:none;">STT</div>
@@ -206,6 +211,7 @@
                     </div>
                 </div>
                 <!-- Grid view -->
+                <!-- Created by BQLINH (1/5/2019) -->
                 <div class="grid-view">
                     <div class="data-item-row">
                         <div class="data-item-1">
@@ -338,6 +344,7 @@
                     </div>
                 </div>
                 <!-- Grid footer -->
+                <!-- Created by BQLINH (1/5/2019) -->
                 <div class="grid-footer">
                     <div class="grid-footer-left">
                         <span class="go-to-first-page icon-change-page"></span>
@@ -351,7 +358,7 @@
                         <span class="separator"></span>
                         <span>Số bản ghi</span>
                         <span class="number-display-record"><input type="text" name="name" value="50" /></span>
-                        <span class="number-display-record-icon"></span>
+                        <div class="dropdown-icon"></div>
                     </div>
                     <div class="grid-footer-right float-right">
                         <span>Hiển thị 1 - 50 trên 100 kết quả</span>
@@ -361,36 +368,39 @@
         </div>
     </div>
     <!-- Dialog đăng ký bạn đọc -->
+    <!-- Created by BQLINH (5/5/2019) -->
     <div class="dlgResgisterReader" title="Đăng ký bạn đọc" style="display:none;">
         <div class="dialog-content">
             <div class="dialog-left  float-left">
                 <div class="avatar"></div>
                 <div class="avatar-change">
-                    <input type="file" id="avatar-change-file" name="name" value="" />
+                    <a href="#" style="color:blue; text-decoration:none; outline:none;">Thay ảnh khác</a>
+                    <!--<input type="file" id="avatar-change-file" name="name" value="" />-->
                 </div>
             </div>
             <div class="dialog-right float-left">
                 <div class="lblTitle"><label>THÔNG TIN BẠN ĐỌC</label></div>
                 <div class="dlgRow">
-                    <div class="col-type-1"><label>Họ và đệm (*)</label></div>
+                    <div class="col-type-1"><label>Họ và đệm <span style="color:red;">(*)</span></label></div>
                     <div class="col-type-5"><input type="text" id="txtFirstAndMiddleName" class="required" value="Bùi Quang " /></div>
-                    <div class="col-type-2 secondlable"><label>Tên (*)</label></div>
-                    <div class="col-type-5"><input type="text" id="txtLastName" class="required" value="Linh" /></div>
-                    <div class="col-type-3 secondlable"><label class="">Họ và tên</label></div>
+                    <div class="col-type-2 secondlable"><label>Tên <span style="color:red;">(*)</span></label></div>
+                    <div class="col-type-6"><input type="text" id="txtLastName" class="required" value="Linh" /></div>
+                    <div class="col-type-3 secondlable"><label>Họ và tên</label></div>
                     <div class="col-type-flex"><input type="text" disabled id="txtFullName" value="Bùi Quang Linh" /></div>
-                </div>              
+                </div>
                 <div class="dlgRow">
-                    <div class="col-type-1"><label>Lớp (*)</label></div>
+                    <div class="col-type-1"><label>Lớp <span style="color:red;">(*)</span></label></div>
                     <div class="col-type-5"><input type="text" id="class" name="class" /></div>
-                    <div class="col-type-2 secondlable"><label class="">Giới tính</label></div>
+                    <div class="col-type-2 secondlable"><label>Giới tính</label></div>
                     <div class="col-type-6">
-                        <select id="cboGender">
-                            <option value="1">Nam</option>
-                            <option value="0">Nữ</option>
-                        </select>
+                        <input style="float: left; width: calc(100% - 17px);" type="text" name="name" />
+                        <div class="dropdown-icon"></div>
                     </div>
-                    <div class="col-type-3 secondlable"><label class="">Ngày sinh</label></div>
-                    <div class="col-type-5"><input type="text" id="txtBirthday" name="Birthday" /></div>
+                    <div class="col-type-3 secondlable"><label>Ngày sinh</label></div>
+                    <div class="col-type-5">
+                        <input style="float: left; width: calc(100% - 26px);" type="text" id="txtBirthday" name="Birthday" />
+                        <div class="date-pick"><div class="date-pick-icon "></div></div>
+                    </div>
                 </div>
                 <div class="dlgRow">
                     <div class="col-type-1"><label>Địa chỉ</label></div>
@@ -401,57 +411,25 @@
                     <div class="col-type-1"><label>Mã thẻ</label></div>
                     <div class="col-type-5"><input type="text" id="txtCardCode" /></div>
                     <div class="col-type-4 secondlable"><label>Ngày cấp</label></div>
-                    <div class="col-type-5"><input type="text" id="txtlicensedDate" /></div>
+                    <div class="col-type-5">
+                        <input style="float: left; width: calc(100% - 26px);" type="text" id="txtlicensedDate" />
+                        <div class="date-pick"><div class="date-pick-icon"></div></div>
+                    </div>
                 </div>
                 <div class="dlgRow">
                     <div class="col-type-1"><label>Ngày hiệu lực</label></div>
-                    <div class="col-type-5"><input type="text" id="txtEffectDate" /></div>
-                    <div class="col-type-4 secondlable"><label>Ngày hết hạn</label></div>
-                    <div class="col-type-5"><input type="text" id="txtExpireDate" /></div>
-                </div>
-            </div>
-            <!--<div class="dialog-right float-left">
-                <div class="row  lblTitle"><label>THÔNG TIN BẠN ĐỌC</label></div>
-                <div class="row">
-                    <div class="col-sm-2"><label>Họ và đệm (*)</label></div>
-                    <div class="col-sm-2"><input type="text" id="txtFirstAndMiddleName" class="required" value="Bùi Quang " /></div>
-                    <div class="col-sm-2"><label>Tên (*)</label></div>
-                    <div class="col-sm-2"><input type="text" id="txtLastName" class="required" value="Linh" /></div>
-                    <div class="col-sm-2"><label class="">Họ và tên</label></div>
-                    <div class="col-sm-2"><input type="text" disabled id="txtFullName" value="Bùi Quang Linh" /></div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-2"><label>Lớp (*)</label></div>
-                    <div class="col-sm-2"><input type="text" id="class" name="class" /></div>
-                    <div class="col-sm-2"><label class="">Giới tính</label></div>
-                    <div class="col-sm-2">
-                        <select id="cboGender">
-                            <option value="1">Nam</option>
-                            <option value="0">Nữ</option>
-                        </select>
+                    <div class="col-type-5">
+                        <input style="float: left; width: calc(100% - 26px);" type="text" id="txtEffectDate" />
+                        <div class="date-pick"><div class="date-pick-icon"></div></div>
                     </div>
-                    <div class="col-sm-2"><label class="">Ngày sinh</label></div>
-                    <div class="col-sm-2"><input type="text" id="txtBirthday" name="Birthday" /></div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-2"><label>Địa chỉ</label></div>
-                    <div class="col-sm-10"><input type="text" id="txtAddress" /></div>
-                </div>
-                <div class="row  lblTitle"><label>THÔNG TIN THẺ</label></div>
-                <div class="row">
-                    <div class="col-sm-2"><label>Mã thẻ</label></div>
-                    <div class="col-sm-2"><input type="text" id="txtCardCode" /></div>
-                    <div class="col-sm-2"><label>Ngày cấp</label></div>
-                    <div class="col-sm-3"><input type="text" id="txtlicensedDate" /></div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-2"><label>Ngày hiệu lực</label></div>
-                    <div class="col-sm-2"><input type="text" id="txtEffectDate" /></div>
-                    <div class="col-sm-2"><label>Ngày hết hạn</label></div>
-                    <div class="col-sm-3"><input type="text" id="txtExpireDate" /></div>
+                    <div class="col-type-4 secondlable"><label>Ngày hết hạn</label></div>
+                    <div class="col-type-5">
+                        <input style="float: left;width: calc(100% - 26px);" type="text" id="txtExpireDate" />
+                        <div class="date-pick"><div class="date-pick-icon"></div></div>
+                    </div>
                 </div>
             </div>
-        </div>-->
+        </div>
     </div>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
     <script src="../Scripts/lib/jquery-3.3.1.min.js"></script>

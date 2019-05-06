@@ -12,7 +12,7 @@ class SupplierJS {
     //Created by BQLINH (5/5/2019)
     constructor() {
         this.initEvents();
-        this.dlgResgisterReader = new Dialog('.dlgResgisterReader', 800, 280, this);
+        this.dlgResgisterReader = new Dialog('.dlgResgisterReader', 800, 340, this);
         context = this;
     }
 
@@ -29,7 +29,8 @@ class SupplierJS {
     // Xử lý khi click vào nút thêm
     // Created by BQLINH (5/5/2019)
     btnAddClick() {
-        alert("Bạn vừa click vào nút thêm!");
+        //alert("Bạn vừa click vào nút thêm!");
+        context.dlgResgisterReader.openDialog();
     }
 
     // Xử lý khi click vào nút sửa
