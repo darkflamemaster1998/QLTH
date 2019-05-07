@@ -20,14 +20,14 @@
     padding: 14px 2px 0 6px;
     font-size: 18px;
     color: #7a6b5e;
-    font-family: 'Segoe UI';
+    font-family: "Arial";
 }
 
 .expand-icon {
-    float: left;
+    /*float: left;*/
     background: transparent;
     font-size: 18px;
-    margin-top: 14px;
+    margin-top: 15px;
     margin-left: 4px;
     color: rgba(153,134,117,1);
     background-color: #F7F7F7;
@@ -40,7 +40,7 @@
 }
 
 .user-content {
-    font: normal 12px 'Segoe UI';
+    font: normal 12px 'Arial';
     cursor: pointer;
     font-weight: bold;
     margin-top: 13px;
@@ -51,7 +51,8 @@
     height: 29px;
     border-bottom: solid 5px #998675;
     overflow: hidden;
-    cursor:pointer;
+    cursor: pointer;
+    box-sizing: content-box;
 }
 
     .menu-header .menu-box-item-header {
@@ -62,7 +63,7 @@
             color: white;
             background: #998675;
             font-weight: 600;
-            line-height: 31px;
+            line-height: 32px;
             float: left;
         }
 
@@ -80,16 +81,18 @@
 
 .year-label {
     margin-top: 2px;
-    margin-right: 7px;
+    margin-right: 15px;
     cursor: pointer;
 }
 
 .current-select {
     background-color: #f7f7f7;
-    padding: 3px 8px;
+    padding: 3px 0 3px 8px;
     border: solid 1px #ccc;
+    width: 90px;
+    height: 25px;
+    display: inline-block;
     font-weight: bold;
-    box-sizing: border-box;
 }
 /*Content*/
 .content {
@@ -104,7 +107,6 @@
     border: 1px solid #ccc;
     border-radius: 3px;
     background-color: #f7f7f7;
-    box-sizing: border-box;
     display: flex;
 }
 
@@ -117,6 +119,7 @@
         height: 15px;
         border-radius: 5px;
         cursor: pointer;
+        box-sizing: content-box;
     }
 
         .toolbar .toolbar-item:hover {
@@ -238,18 +241,16 @@
     .filter-option .filter-option-left {
         display: flex;
         font-weight: bold;
-        margin-right: 1px;
     }
 
     .filter-option .filter-option-middle {
         border-left-color: #d1d1d1;
         display: flex;
-        margin-right: -1px;
+        margin-right: -2px;
     }
 
     .filter-option .filter-option-right {
         display: flex;
-        margin-right: 1px;
     }
 /*Grid view*/
 .grid-view {
@@ -258,6 +259,7 @@
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    overflow-y:auto;
     box-sizing: border-box;
 }
 /* Một hàng*/
@@ -330,8 +332,8 @@
 
 .current-display-record input, .number-display-record input {
     background: #fff;
-    font: normal 12px/18px 'Segoe UI';
-    height: 17px;
+    font: normal 12px/18px 'Arial';
+    height: 21px;
     width: 28px;
     border: solid 1px #ccc;
     padding: 1px 0px 2px 2px;
@@ -341,7 +343,6 @@
 .number-display-record input {
     width: 36px;
     margin: 0 0 0 6px;
-    height: 21px;
 }
 
 .dropdown-icon {
@@ -394,13 +395,13 @@
     padding-right: 10px;
 }
 
-/*Phần này css cho dialog*/
+/*Phần này css cho dialog đăng ký bạn đọc(tất cả đến chỗ comment css cho dialog cung cấp)*/
 .dialog-content input, .dialog-content select {
     height: 22px;
 }
 
 .dialog-content {
-    font: 12px "Seoge UI";
+    font: 12px "Arial";
     margin-top: 5px;
 }
 /*Phần này css cho dialog phía bên trái*/
@@ -506,6 +507,7 @@
     border-radius: 2px;
     background-color: #d1d1d1;
 }
+
 .date-pick-icon {
     background: transparent url("http://cdn.qlth.vn/Library/Content/Css/Control/image/sprite.gif") no-repeat 1px 0 !important;
     width: 22px;
@@ -515,18 +517,40 @@
     float: left;
     margin: 1px 0 0 0;
 }
+
 .dlgRow .dropdown-icon {
     background: white url("http://thptmisa1.demo.qlth.vn/Library/WebResource.axd?d=v2cyYQ_uRdOKEHufN3vrGs9gDUBazvIn50iRc5ifHdVOQ8bMopWuHEgVi1XFK_lsa3Y5H4a9br7HAi8frzOoHDWJJzGa9q0aINv5ktWQ7e-Oyy62s_Z8VtPRzQbJNNeS4b5-ZI8VQGgwCAZqH_s5_3lf3CNWpt3fuTYM8wz249B2DD5regjBrjkGPbe0WWKioIg3DpCzL2Iic7UIGzmkwA2&t=636876519251431687") no-repeat;
     background-position: 0 0;
     width: 17px;
-    margin-right:-6px;
+    margin-right: -6px;
     height: 25px;
     float: right;
 }
+/*Phần này css cho content của dialog cung cấp*/
+.dlgSupplierDetail .dlgRow {
+    padding: 0;
+}
+.dlgSupplierDetail label {
+    margin-top: 6px;
+    margin-left: 8px;
+}
+}
+.dlgSupplierDetail input {
+    height: 25px;
+}
+.dlgSupplierDetail .col-type-flex {
+}
+    .col-type-flex textarea{
+        resize: none;  
+        width: 100%;
+    }
+
+
 /*Phần này css cho title dialog*/
-.ui-dialog-titlebar{
+.ui-dialog-titlebar {
     line-height: 20px;
     padding-left: 30px;
+    font-family: 'Arial';
     background: transparent url(http://cdn.qlth.vn/Library/Content/Css/Control/Image/logo25.png) no-repeat 2px center;
 }
 #ui-id-2 {
@@ -534,6 +558,14 @@
     font-weight: bold;
 }
 /*Phần này css cho footer dialog*/
-.ui-button, .ui-corner-all, .ui-widget{
-
+.ui-dialog .ui-dialog-buttonpane button {
+    width: 80px;
+    height: 25px;
+    font-family: 'Arial';
+}
+.save-button {
+    background: 4px 4px url("http://cdn.qlth.vn/Library/Content/Css/Main/image/icon/save16.png") no-repeat;
+}
+.cancel-button {
+    background: 4px 4px url("http://cdn.qlth.vn/Library/Content/Css/Main/image/icon/Disabled16.png") no-repeat;
 }
